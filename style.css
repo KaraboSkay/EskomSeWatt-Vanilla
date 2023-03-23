@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --background: var(--background);
+  --foreground: var(--foreground);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #bbb;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+
+.area-form {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.area-form input {
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.area-form input::placeholder {
+  color: #bbb;
+}
+
+.area-form input:focus {
+  outline: none;
+}
+
+.area {
+  text-transform: uppercase;
+  font-size: 45px;
+  margin-bottom: 25px;
+}
+
+.area.hidden {
+  display: none;
+}
+
+.screen-one {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen-one.hidden {
+  display: none;
+}
+
+
+.area-screen-one{
+  position: absolute;
+  top:45px;
+  left:30px;
+  font-size:35px;
+}
+
+.button{
+  position: absolute;
+  top:190px;
+  left:25px;
+  background-color: gold;
+  color: #000;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 20px 50px;
+  margin: 5px;
+  font-size: 18px;
+  font-weight:bold;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button:focus {
+  outline: 0;
+}
+
+
+.screen-two {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen-two.hidden {
+  display: none;
+}
+
+.container {
+  display: block;
+  background-color: #fff;
+  color: #000;
+  border: 5px solid #fff;
+  margin: 10px;
+  border-radius: 15%;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.container-header {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  top: 35px;
+  left: 25px;
+}
+
+.container-header.hidden {
+  display: none;
+}
+
+.Stage {
+  color: var(--foreground);
+  font-size: 20px;
+}
+
+.weekday {
+  position: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  left:30px;
+}
+
+small + small {
+  margin-left: 120px;
+}
+
+.container-body {
+  position: absolute;
+  top: 85px;
+  left: 25px;
+  width: 100%;
+}
+
+.area.hidden {
+  display: none;
+}
+
+/* 
+For intial design
+
+.loadshedding-in.hidden {
+  display: none;
+}
+.loadshedding-in {
+  position: absolute;
+  top: -20px;
+  font-weight: bold;
+}
+.loadshedding-in .mins-to {
+  font-size: 70px;
+  color: var(--foreground);
+}
+
+.currently-loadshedding .CL-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.currently-loadshedding .mins-left {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.currently-loadshedding img {
+  position: absolute;
+  top: -15px;
+  left: 180px;
+  width: 65px;
+}
+
+.currently-loadshedding.hidden {
+  display: none;
+} */
+
+.loadshedding-suspended {
+  position: relative;
+  top: 60px;
+  left:25px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.loadshedding-suspended img {
+  position: absolute;
+  top: -100px;
+  left: 140px;
+  width: 120px;
+}
+.loadshedding-suspended .LS-text {
+  color: green;
+}
+
+.loadshedding-suspended.hidden {
+  display: none;
+}
+
+
+.date-time-containers{
+  display: flex ;
+  flex-direction: column;
+  position: absolute;
+  top: 55%;
+  left: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.container-date-time {
+  position: relative; /* use relative positioning instead of absolute */
+  margin-bottom: 10px;
+  margin-top: 10px; /* add margin-top instead of top */
+  padding: 7px;
+  width: 150%;
+  height: 25%;
+  border-left: 5px solid var(--foreground);
+  background: var(--background);
+  color: var(--foreground);
+  text-indent: 5px;
+  text-align: center;
+}
+
+
+.daystamp {
+  font-size: 20px;
+}
+
+
+.container-date-time .timestamp {
+  font-size: 23px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-date-time.hidden {
+  display: none;
+}
